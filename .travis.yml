@@ -1,0 +1,16 @@
+language: d
+addons:
+  apt:
+    packages:
+    - libevent-dev
+    - libssl-dev
+    - pkg-config
+    - zlib1g-dev
+matrix:
+  include:
+    - d: dmd
+      env:
+        - COVERAGE=true
+        - { secure: QLP6CSVvn97lhrMniSQxFsI8GFIUQvyOtcIhJZik+8xTRcXRJJ+ikMQRmX8byghQxZewRDTFZLv8sXesQ7vQNEOhCdANzc31YapB5SK0/W/c49jRxortiBvYtv45BTaqT/29qti5BiPfxpk6xlUSoepimq8zj27LYoosg8Uav64HNX59NUe2iwsgQDozzT8ePuuThlhsrdxTtm3mhgdKezWbaseol9Ja8jMGIjL//+PNy5JsSQ19XvQD2CnPVKlf4vgjV9ghcAEUVDuOD86Ik3EYSAtMc+ObhLUd8Qb7nWtMr2e9uiPE/cjl0WCCkJBvl4jmA6XWKx7jhw/TsSYO/ofFtAMsg8hAT8E4O+l2aU3NORXDZf1hMSTyvXCjF8S4R0S3u4H57qXzF773043HKWQDlpljopwivxSxCjtQ7k35OIghpt5ZxpelXUaXJWrUwpFEh0jRt1xP4vhqlScSw307h1IQXky8BRHHDNk1dbALPbJy1GMDtaxXLi6c5DvUevG3d7GhHs8FFZpXtJlhZj3dNeBDuKXK48DTmeDoW/LbA0nRLXtk+TXw6hyU4t2YRdilwtKDBQIz7AJKnCb9tLC+/Cv79/55s8XxO8ExkhvVFZL3nU8rRpKyDydeK4Vt4ZzeXHWLO/2fxPQM7h3qnKSnc8xlaqw9GC0JSQXzCF4= }
+      script: ./travis.sh
+      after_success: bash <(curl -s https://codecov.io/bash)

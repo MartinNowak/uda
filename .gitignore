@@ -1,0 +1,16 @@
+libuda.a
+
+.dub
+docs.json
+__dummy.html
+docs/
+uda.so
+uda.dylib
+uda.dll
+uda.a
+uda.lib
+uda-test-*
+*.exe
+*.o
+*.obj
+*.lst

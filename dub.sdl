@@ -1,0 +1,6 @@
+name "uda"
+description "Standardized User Defined Attributes"
+authors "Martin Nowak"
+copyright "Copyright © 2017, Martin Nowak"
+license "BSL-1.0 (Boost)"
+x:ddoxTool "scod"

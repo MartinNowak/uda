@@ -1,0 +1,45 @@
+<!DOCTYPE html><html><head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Struct id</title>
+<link rel="stylesheet" href="../../../css/style.min.css"/>
+<script type="text/javascript" src="../../../js/script.min.js"></script></head><body onload="setupDdox();"><header></header><nav id="main-nav"><div><noscript><p style="color: red">The search functionality needs JavaScript enabled</p></noscript><div id="symbolSearchPane" style="display: none"><form action="#" method="GET">
+<input id="symbolSearch" type="text" name="q" placeholder="Search for symbols" autocomplete="off" onchange="performSymbolSearch(24);" onkeypress="this.onchange();" onpaste="this.onchange();" oninput="this.onchange();" autofocus/></form><ul id="symbolSearchResults" class="symbolList" style="display: none"></ul><script type="application/javascript" src="../../../symbols.js"></script><script type="application/javascript">var symbolSearchRootDir = "../../../";
+document.getElementById('symbolSearchPane').style.display = 'block';</script></div><ul class="tree-view"><li class="tree-view "><div class="package ">std</div><ul class="tree-view"><li class="tree-view "><div class="package ">uda</div><ul class="tree-view"><li><div class="module selected"><a href="../../../std/uda/db.html">db</a></div></li></ul></li></ul></li></ul></div><p id="main-nav-footer">Built with
+<a href="https://github.com/MartinNowak/scod">scod</a></p></nav><div id="main-contents"><div><h1>Struct id</h1><p>Marks a field as primary key.
+</p><div class="prototype"><code class="lang-d"><div class="single-prototype"><span class="kwd">struct</span> <span class="typ">id</span>
+<span class="pun">;</span></div></code></div>
+<section><h2>Example</h2>
+
+<pre class="code"><code class="lang-d"><span class="kwd">struct </span><span class="typ">User
+</span><span class="pun">{
+    @</span><span class="pln">id </span><span class="typ">string </span><span class="pln">email</span><span class="pun">;
+}
+
+</span><span class="kwd">struct </span><span class="typ">Entry
+</span><span class="pun">{
+    </span><span class="typ">int </span><span class="pln">id</span><span class="pun">;
+}
+
+</span><span class="kwd">struct </span><span class="typ">Person
+</span><span class="pun">{
+    </span><span class="kwd">import </span><span class="pln">std<wbr/></span><span class="pun">.</span><span class="pln">datetime </span><span class="pun">: </span><span class="typ">Date</span><span class="pun">;
+
+    </span><span class="com">// compound key
+    </span><span class="kwd">static struct </span><span class="typ">Key
+    </span><span class="pun">{
+        </span><span class="typ">string </span><span class="pln">firstname</span><span class="pun">, </span><span class="pln">surname</span><span class="pun">;
+        </span><span class="typ">Date </span><span class="pln">birthday</span><span class="pun">;
+    }
+
+    @</span><span class="pln">id </span><span class="typ">Key </span><span class="pln">key</span><span class="pun">;
+}
+</span></code></pre>
+</section>
+</div><footer><div id="license-info"><p>Martin Nowak
+</p>
+
+
+<p>boost.org/LICENSE_1_0.txt, Boost License 1.0.
+</p>
+</div></footer></div></body></html>
